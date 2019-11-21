@@ -43,15 +43,43 @@ public class Coche {
 
     public static void main(String[] args) {
 
-string modelo;
-string color;
+String modelo;
+String color;
 boolean Metalizado;
-string matricula;
+String matricula;
 TipoCoche tipo;
 TipoSeguro seguro;
 
     } 
 }
+
+ public static void main(String[] args) {
+        
+        // Creamos objeto teclado
+        Scanner teclado = new Scanner(System.in);
+
+        // Declaramos variables a utilizar
+        String nombre;
+        int edad;
+        boolean estudias;
+        float salario;
+
+        // Entrada de datos
+        System.out.println("Nombre: ");
+        nombre=teclado.nextLine();
+        System.out.println("Edad: ");
+        edad=teclado.nextInt();
+        System.out.println("Estudias: ");
+        estudias=teclado.nextBoolean();
+        System.out.println("Salario: ");
+        salario=teclado.nextFloat();
+
+        // Salida de datos
+        System.out.println("Bienvenido: " + nombre);
+        System.out.println("Tienes: " + edad +" años");
+        System.out.println("Estudias: " + estudias);
+        System.out.println("Tu salario es: " + salario +" euros");
+    }
 
 /** Bibliografia Programación en Java 2
 Comentario: Se podría pensar en utilizar un valor de tipo boo lean para la modalidad de seguro, por ejemplo,
