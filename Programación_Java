@@ -30,18 +30,27 @@
 
 package Trafico;
 
-/**
- * @author Jaime Dargallo Saiz
- */
- 
-enum TipoCoche { MINI, UTILITARIO, FAMILIAR, DEPORTIVO };
-enum TipoSeguro { TERCEROS, TODORIESGO }; 
+import java.util.Scanner;
 
-// NO es una buena decisión usar los booleanos para atributos que toman 2 dos valores.
+public class main {
+    
+   public static void main(String[] args){
+        
+        // Creamos objeto teclado
+        Scanner teclado = new Scanner(System.in);
 
-public class Coche {
+        // Declaramos variables a utilizar
+        String nombre;
 
-    public static void main(String[] args) {
+        // Entrada de datos
+        System.out.println("Nombre: ");
+        nombre=teclado.nextLine();
+        
+        // Salida de datos
+        System.out.println("Bienvenido: " + nombre);
+    }
+   
+     public static void coche(String[] args) {
 
 String modelo;
 String color;
@@ -49,37 +58,8 @@ boolean Metalizado;
 String matricula;
 TipoCoche tipo;
 TipoSeguro seguro;
-
-    } 
-}
-
- public static void main(String[] args) {
-        
-        // Creamos objeto teclado
-        Scanner teclado = new Scanner(System.in);
-
-        // Declaramos variables a utilizar
-        String nombre;
-        int edad;
-        boolean estudias;
-        float salario;
-
-        // Entrada de datos
-        System.out.println("Nombre: ");
-        nombre=teclado.nextLine();
-        System.out.println("Edad: ");
-        edad=teclado.nextInt();
-        System.out.println("Estudias: ");
-        estudias=teclado.nextBoolean();
-        System.out.println("Salario: ");
-        salario=teclado.nextFloat();
-
-        // Salida de datos
-        System.out.println("Bienvenido: " + nombre);
-        System.out.println("Tienes: " + edad +" años");
-        System.out.println("Estudias: " + estudias);
-        System.out.println("Tu salario es: " + salario +" euros");
-    }
+     }
+}   
 
 /** Bibliografia Programación en Java 2
 Comentario: Se podría pensar en utilizar un valor de tipo boo lean para la modalidad de seguro, por ejemplo,
@@ -89,6 +69,8 @@ dos valores. Por un lado, no queda claro el significado del valor false. Por otr
 que quizá no tengan sentido. Lo peor es que compromete la extensibilidad del programa: si se necesitara otra
 modalidad de seguro habrá que modificar muchas líneas de código, mientras que añadir un valor nuevo a un
 enumerado es sumamente sencillo.
+
+https://www.youtube.com/watch?v=W-j26e71t-o
 */
 
 
