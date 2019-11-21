@@ -1,0 +1,58 @@
+/*    ENUNCIADO
+* 2. (1,5 puntos) Construye un proyecto en Java llamado Trafico y define una clase Coche que represente un coche, los atributos serán:
+*   · Modelo,
+*   · Color,
+*   · Si la pintura es metalizada o no,
+*   · Matrícula,
+*   · El tipo de coche, que puede ser MINI, UTILITARIO, FAMILIAR o DEPORTIVO,
+*   · Modalidad del seguro, que puede ser a TERCEROS o a TODO RIESGO.
+* La clase debe incluir un método principal que solicite el nombre al usuario para posteriormente mostrarlo por pantalla.
+* Ejercicio 3. (2 puntos) Define dos constructores para la clase anterior, uno sin parámetros que se inicialice a los valores por defecto y otro que reciba los valores de los 6 atributos.
+* Ejercicio 4. (1 punto) Añade a la clase  Coche un método de nombre imprimeCoche que imprima el modelo y el color del coche. Utiliza el operador this.
+* Ejercicio 5. (2,5 puntos) Escribe un programa que cree dos instancias de un coche con las siguientes características:
+*   A)     La primera se creará con la llamada al constructor con parámetros y se le dará los siguientes parámetros:
+*     •	Modelo: SEAT IBIZA
+*     •	Color: ROJO
+*     •	Pintura metalizada
+*     •	Matrícula: M1900K
+*     •	Tipo de coche: UTILITARIO
+*     •	Modalidad del seguro:  TERCEROS 
+*   B)      La segunda se creará con el constructor sin parámetros y después se establecerán los siguientes valores a los atributos:
+*     •	Modelo: AUDI A3
+*     •	Color: BLANCO
+*     •	Pintura: metalizada 
+*     •	Matrícula: 5985GMK
+*     •	Tipo de coche: DEPORTIVO
+*     •	Modalidad del seguro:  TODO RIESGO.
+* Ejercicio 6. (2 puntos) Define los métodos modificarMatricula y modificarSeguro con un parámetro que modifique el atributo matrícula o seguro.  Añade a tu programa las instrucciones necesarias para cambiar la matrícula del Seat Ibiza a M1900B y el seguro del Audi A3 a terceros.
+**/
+
+
+package Trafico;
+/**
+ *
+ * @author Jaime Dargallo Saiz
+ */
+enum TipoCoche { MINI, UTILITARIO, FAMILIAR, DEPORTIVO };
+enum TipoSeguro { TERCEROS, TODORIESGO }; 
+// NO es una buena decisión usar los booleanos para atributos que toman 2 dos valores.
+
+public class Coche {
+
+    public static void main(String[] args) {
+     
+        // TODO code application logic here
+    } 
+}
+
+/** Bibliografia Programación en Java 2
+Comentario: Se podría pensar en utilizar un valor de tipo boo lean para la modalidad de seguro, por ejemplo,
+boolean seguroATerceros. Se usaría el valor true cuando se disponga de un seguro a terceros, y false cuando
+el seguro sea a todo riesgo. En general, no es una buena decisión usar los booleanos para atributos que toman
+dos valores. Por un lado, no queda claro el significado del valor false. Por otro, se pueden aplicar operaciones
+que quizá no tengan sentido. Lo peor es que compromete la extensibilidad del programa: si se necesitara otra
+modalidad de seguro habrá que modificar muchas líneas de código, mientras que añadir un valor nuevo a un
+enumerado es sumamente sencillo.
+*/
+
+
