@@ -29,19 +29,27 @@
 
 
 package Trafico;
+
 /**
- *
  * @author Jaime Dargallo Saiz
  */
+ 
 enum TipoCoche { MINI, UTILITARIO, FAMILIAR, DEPORTIVO };
 enum TipoSeguro { TERCEROS, TODORIESGO }; 
+
 // NO es una buena decisión usar los booleanos para atributos que toman 2 dos valores.
 
 public class Coche {
 
     public static void main(String[] args) {
-     
-        // TODO code application logic here
+
+string modelo;
+string color;
+boolean Metalizado;
+string matricula;
+TipoCoche tipo;
+TipoSeguro seguro;
+
     } 
 }
 
