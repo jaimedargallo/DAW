@@ -28,37 +28,60 @@
 **/
 
 
-package Trafico;
+//Declaramos Paquete Trafico
+package trafico;
 
+//Importamos Utilidad Scanner
 import java.util.Scanner;
 
-public class main {
+/**
+ * @author Jaime Dargallo Saiz
+ */
+
+//Ejercicio 2
+
+//Abrimos Clase Coche
+public class Coche {
     
+    enum TipoCoche{ MINI, DEPORTIVO, UTILITARIO};
+    enum TipoSeguro { TERCEROS, TODO_RIESGO };
+    
+    //Abrimos metodo coche
+    public static void coche(String[] args) {
+
+     // Declaramos Variables
+     String modelo;
+     String color;
+     boolean metalizado;
+     String matricula;
+     TipoCoche tipo;
+     TipoSeguro seguro;
+     
+   //Cerramos metodo coche  
+   }
+    
+    //Abrimos metodo main
    public static void main(String[] args){
         
         // Creamos objeto teclado
         Scanner teclado = new Scanner(System.in);
-
-        // Declaramos variables a utilizar
+        // Declaramos variables
         String nombre;
-
         // Entrada de datos
         System.out.println("Nombre: ");
         nombre=teclado.nextLine();
-        
         // Salida de datos
         System.out.println("Bienvenido: " + nombre);
+        
+    //Cerramos metodo main      
     }
    
-     public static void coche(String[] args) {
-
-String modelo;
-String color;
-boolean Metalizado;
-String matricula;
-TipoCoche tipo;
-TipoSeguro seguro;
-     }
+   // Ejercicio 3
+   
+   
+   //Ejercicio 4
+   
+//Cerramos Clase Coche   
 }   
 
 /** Bibliografia Programación en Java 2
