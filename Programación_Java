@@ -76,10 +76,18 @@ public class Coche {
     //Cerramos metodo main      
     }
    
+   
    // Ejercicio 3
    
-   
-   //Ejercicio 4
+      public Coche(){
+    }
+    
+    public Coche ( String modelo, String color ){
+        Modelo = coche.modelo;
+	Color = coche.color;
+    }
+    
+    //Ejercicio 4
    
 //Cerramos Clase Coche   
 }   
