@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<META name="Author" content="Jaime Dargallo Saiz">
+
+<!-- https://www.w3schools.com/html/html_charset.asp -->
+
+<!-- Se utilizará el doctype: <!DOCTYPE HTML>
+  
+    Los caracteres especiales (acento, interrogación,…) deben incluirse mediante los caracteres de escape correspondientes.
+    
+    En test.html se colocará el titulo Test. Como metadatos incluiremos las principales palabras relacionadas con la página, el autor y la descripción.
+
+    La página test.html tendrá el color de fondo será negro, el color por defecto del texto será azul, los enlaces se visualizarán en verde, los enlaces visitados en rosa, los enlaces rotos o pulsados en gris, de fondo se colocará una imagen textura.png que se encuentra situada la carpeta \resources. Por último, la página contendrá consecutivamente:
+        Un párrafo cuyo contenido estará centrado, dentro del párrafo encontramos la palabra Términos que será un enlace al marcador terminos dentro de la página https://arcipreste.org/marcas.html. El enlace debe cargarse en una nueva ventana o pestaña.
+        Un formulario de nombre examen, que se envía a la dirección de correo: examen@ies.com en modo post. Dentro del formulario encontramos:
+            Un conjunto de controles bajo el texto: Preguntas. Dentro colocaremos:
+                Una lista desordenada de tipo circulo vacio:
+                El primer elemento de las lista será:
+                    Un texto Primera versión de HTML que incorporó CSS: que se asocia al control usuario.
+                    Una caja de tipo texto, de nombre usuario, tamaño 16 y máximo de caracteres 4.
+                El segundo elemento de las lista será:
+                    Un texto: ¿Cuál de los siguientes no es un carácter de escape?
+                    Sub-lista ordenada de números comenzando en -7:
+                        Dentro de la sub-lista se colocarán siete botones de opción de nombre escape, cada uno asociado a un texto situado a continuación. 
+                        El primero tomará valor 7 y se le asociara el texto Ó.
+                        El segundo tomará valor 6 y se le asociara el texto Ñ.
+                        El tercero tomará valor 5 y se le asociara el texto ª.
+                        El cuarto tomará valor 4 y se le asociara el texto @.
+                        El quinto tomará valor 3 y se le asociara el texto “.
+                        El sexto tomará valor 2 y se le asociara el texto ®.
+                        El séptimo será el seleccionado por defecto, tomará valor 1 y se le asociara el texto Ninguno de los anteriores.
+                        El tercer elemento de las lista será:
+                            Un texto: Indica un protocolo seguro: que se asocia al control seguro.
+                            Un menú desplegable de nombre seguro, con cinco opciones:
+                                 La primera opción de texto Transferencia de ficheros, valor ftp y seleccionada.
+                                La segunda opción de texto Web  y valor http.
+                                La tercera opción de texto Correo  y valor smtp.
+                                La cuarta opción de texto Sesión Remota  y valor ssh.
+                            La quinta opción de texto Red Virtual  y valor vpn.
+            Un párrafo cuyo contenido estará centrado, dentro del párrafo encontramos un botón para enviar el formulario con el texto Finalizar.
+
+ -->
+
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    
+    <body>
+    	<br>
+        <p align="center"><a href="https://arcipreste.org/marcas.html#terminos" target="_blank" title="Términos de uso">Términos</a></p>
+        <br>
+		<form name="Examen" action="examen@ies.com" method="post">
+			<fieldset>
+    			<legend>Preguntas</legend>
+ 				<ul style="list-style-type:circle;">
+ 					<li>Primera versión de HTML que incorporó CSS: <input type="text" name="Usuario" size="16" maxlength="4"></input>
+ 					</li>
+ 					<li>¿Cuál de los siguientes no es un carácter de escape?
+						<ol start="-7">
+	 						 <li><input type="radio" name="escape" value=""></li>
+	 						 <li><input type="radio" name="escape" value=""></li>
+	 						 <li><input type="radio" name="escape" value=""><i style="font-size: 0.9375rem; line-height: 1.5;">ª.</i></li>
+	 						 <li><input type="radio" name="escape" value="">@</li>
+	 						 <li><input type="radio" name="escape" value=""></li>
+	 						 <li><input type="radio" name="escape" value=""></li>
+ 							 <li><input type="radio" name="escape" value="" checked>Ninguno de los anteriores.</li>
+						</ol> 
+ 					</li>
+ 					<li>Indica un protocolo seguro: 
+ 						<select name="seguro">
+ 							<option value="ftp">Transferencia de archivos</option>
+   							<option value="http">Web</option>
+    						<option value="smtp">Corre</option>
+    						<option value="ssh">Sesión remota</option>
+    						<option value="vpn">Red virtual</option>
+  						</select>
+  					</li>
+				</ul> 
+            </fieldset>
+        </form>   
+        <br>   
+        <p align="center"><button type="button">Finalizar</button></p>
+
+    </body>   
+            </html
