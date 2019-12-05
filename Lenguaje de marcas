@@ -40,6 +40,11 @@
 
  -->
 
+<!DOCTYPE HTML>
+<meta name="Author" content="Jaime Dargallo Saiz">
+<meta name="description" content="Segunda tarea de la Asignatura lenguaje de marcas. En la que practicamos lo aprendido sobre Html y CSS">
+<meta name="keywords" content="DAW, HTML, CSS, lenguajes, marcas">
+
 <html>
     <head>
         <title>Test</title>
@@ -48,22 +53,22 @@
     
     <body>
     	<br>
-        <p align="center"><a href="https://arcipreste.org/marcas.html#terminos" target="_blank" title="Términos de uso">Términos</a></p>
+        <p align="center"><a href="https://arcipreste.org/marcas.html#terminos" target="_blank" title="Terminos de uso">T&eacute;rminos</a></p>
         <br>
 		<form name="Examen" action="examen@ies.com" method="post">
 			<fieldset>
     			<legend>Preguntas</legend>
  				<ul style="list-style-type:circle;">
- 					<li>Primera versión de HTML que incorporó CSS: <input type="text" name="Usuario" size="16" maxlength="4"></input>
+ 					<li>Primera versi&oacute;n de HTML que incorpor&oacute; CSS: <input type="text" name="Usuario" size="16" maxlength="4"></input>
  					</li>
- 					<li>¿Cuál de los siguientes no es un carácter de escape?
+ 					<li>&iquest;Cu&aacute;l de los siguientes no es un car&aacute;cter de escape&#63;
 						<ol start="-7">
-	 						 <li><input type="radio" name="escape" value=""></li>
-	 						 <li><input type="radio" name="escape" value=""></li>
-	 						 <li><input type="radio" name="escape" value=""><i style="font-size: 0.9375rem; line-height: 1.5;">ª.</i></li>
-	 						 <li><input type="radio" name="escape" value="">@</li>
-	 						 <li><input type="radio" name="escape" value=""></li>
-	 						 <li><input type="radio" name="escape" value=""></li>
+	 						 <li><input type="radio" name="escape" value="">&Oacute;</li>
+	 						 <li><input type="radio" name="escape" value="">&Ntilde;</li>
+	 						 <li><input type="radio" name="escape" value="">&ordf;</i></li>
+	 						 <li><input type="radio" name="escape" value="">&#64;</li>
+	 						 <li><input type="radio" name="escape" value="">&quot;</li>
+	 						 <li><input type="radio" name="escape" value="">&reg;</li>
  							 <li><input type="radio" name="escape" value="" checked>Ninguno de los anteriores.</li>
 						</ol> 
  					</li>
@@ -72,7 +77,7 @@
  							<option value="ftp">Transferencia de archivos</option>
    							<option value="http">Web</option>
     						<option value="smtp">Corre</option>
-    						<option value="ssh">Sesión remota</option>
+    						<option value="ssh">Sesi&oacute;n remota</option>
     						<option value="vpn">Red virtual</option>
   						</select>
   					</li>
@@ -83,4 +88,4 @@
         <p align="center"><button type="button">Finalizar</button></p>
 
     </body>   
-            </html
+</html
