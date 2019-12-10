@@ -89,3 +89,55 @@
 
     </body>   
 </html
+
+
+<!-- CSS Externo
+
+
+body {
+  background-color: black;
+  background-image: url('resources/textura.png');
+  color: Blue;
+}
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: hotpink;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: grey;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+a:active {
+  color: grey;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+p {
+  
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+
+-->
+
+
+
+
+
+
+
