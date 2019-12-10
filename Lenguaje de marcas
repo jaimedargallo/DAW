@@ -55,8 +55,8 @@
     	<br>
         <p align="center"><a href="https://arcipreste.org/marcas.html#terminos" target="_blank" title="Terminos de uso">T&eacute;rminos</a></p>
         <br>
-		<form name="Examen" action="examen@ies.com" method="post">
-			<fieldset>
+	<form name="Examen" action="examen@ies.com" method="post">
+	    <fieldset>
     			<legend>Preguntas</legend>
  				<ul style="list-style-type:circle;">
  					<li>Primera versi&oacute;n de HTML que incorpor&oacute; CSS: <input type="text" name="Usuario" size="16" maxlength="4"></input>
