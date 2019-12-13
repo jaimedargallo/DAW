@@ -5,24 +5,20 @@ import java.io.InputStreamReader;
 
 public class Supuesto1 {
     
-    private static BufferedReader stdin = new BufferedReader( new InputStreamReader(System.in));
-    
-    public static int suma(int numero1, int numero2, int numero3)
-    {
-        int resultado;
-        resultado = numero1 + numero2 + numero3;
-        return resultado; //Mediante return devolvemos el resultado de la suma
-    }
+    private static final BufferedReader stdin = new BufferedReader( new InputStreamReader(System.in));
     
     public static void main(String[] args) throws IOException {
         //Declaración de variables
         String input; //Esta variable recibirá la entrada de teclado
         int primer_numero, segundo_numero, tercer_numero; //Estas variables almacenarán los operandos
         
-        // Solicitamos que el usuario introduzca los valores por consola
-        System.out.print ("Valor de A:"); 
-        input = stdin.readLine(); //Leemos la entrada como cadena de caracteres
-        primer_numero = Integer.parseInt(input); //Transformamos a entero lo introducido
+ 
+                // Solicitamos que el usuario introduzca los valores por consola
+                System.out.print ("Valor de A:"); 
+                input = stdin.readLine(); //Leemos la entrada como cadena de caracteres
+                primer_numero = Integer.parseInt(input); //Transformamos a entero lo introducido
+
+                
         System.out.print ("Valor de B:"); 
         input = stdin.readLine(); //Leemos la entrada como cadena de caracteres
         segundo_numero = Integer.parseInt(input);  //Transformamos a entero lo introducido
@@ -30,14 +26,10 @@ public class Supuesto1 {
         input = stdin.readLine(); //Leemos la entrada como cadena de caracteres
         tercer_numero = Integer.parseInt(input);  //Transformamos a entero lo introducido
         
-        //Imprimimos los números introducidos
-        System.out.println ("A = " + primer_numero);
-        System.out.println ("B = " + segundo_numero);
-        System.out.println ("C = " + tercer_numero);
-        System.out.println ("obteniendo su suma... ");
+        //Imprimimos los resultados
+        System.out.println ("A = " + tercer_numero);
+        System.out.println ("B = " + primer_numero);
+        System.out.println ("C = " + segundo_numero);
         
-        //Invocamos al método que realiza la suma, pasándole los parámetros adecuados
-        System.out.println ("La suma de ambos operandos es: " + suma(primer_numero,segundo_numero,tercer_numero));
-    
-    }
-}
+    } //Cierre main
+} //Cierre Class
