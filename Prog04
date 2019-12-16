@@ -12,20 +12,46 @@ public class Supuesto1 {
         String input; //Esta variable recibirá la entrada de teclado
         int primer_numero, segundo_numero, tercer_numero; //Estas variables almacenarán los operandos
         
- 
-                // Solicitamos que el usuario introduzca los valores por consola
-                System.out.print ("Valor de A:"); 
-                input = stdin.readLine(); //Leemos la entrada como cadena de caracteres
-                primer_numero = Integer.parseInt(input); //Transformamos a entero lo introducido
-
-                
-        System.out.print ("Valor de B:"); 
+        do{
+            System.out.print ("Valor de A:"); // Solicitamos que el usuario introduzca los valores por consola
         input = stdin.readLine(); //Leemos la entrada como cadena de caracteres
-        segundo_numero = Integer.parseInt(input);  //Transformamos a entero lo introducido
-        System.out.print ("Valor de C:"); 
-        input = stdin.readLine(); //Leemos la entrada como cadena de caracteres
-        tercer_numero = Integer.parseInt(input);  //Transformamos a entero lo introducido
+        primer_numero = Integer.parseInt(input); //Transformamos a entero lo introducido
         
+           try{
+           }catch(NumberFormatException e){
+                System.out.println("Debe introducir un número entre 0 y 100.");   
+            }finally{
+            }
+           
+        }while (primer_numero < 0 || primer_numero > 100);
+        
+          do{
+            System.out.print ("Valor de B:"); // Solicitamos que el usuario introduzca los valores por consola
+        input = stdin.readLine(); //Leemos la entrada como cadena de caracteres
+        segundo_numero = Integer.parseInt(input); //Transformamos a entero lo introducido
+        
+           try{
+           }catch(NumberFormatException e){
+                System.out.println("Debe introducir un número entre 0 y 100.");   
+            }finally{
+            }
+           
+        }while (segundo_numero < 0 || segundo_numero > 100);
+          
+            do{
+            System.out.print ("Valor de C:"); // Solicitamos que el usuario introduzca los valores por consola
+        input = stdin.readLine(); //Leemos la entrada como cadena de caracteres
+        tercer_numero = Integer.parseInt(input); //Transformamos a entero lo introducido
+        
+           try{
+           }catch(NumberFormatException e){
+                System.out.println("Debe introducir un número entre 0 y 100.");   
+            }finally{
+            }
+           
+        }while (tercer_numero < 0 || tercer_numero > 100);
+       
+             
         //Imprimimos los resultados
         System.out.println ("A = " + tercer_numero);
         System.out.println ("B = " + primer_numero);
@@ -33,3 +59,83 @@ public class Supuesto1 {
         
     } //Cierre main
 } //Cierre Class
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+package supuesto2;
+import java.io.*;
+
+public class Supuesto2 {
+    public static void main(String[] args){
+        
+        BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+        
+        int n1 = 0, n2 = 0, n3 = 0; // Declaramos Variables
+        String linea1, linea2, linea3;
+       
+        do{
+            try{
+               System.out.println("Valor de A: ");
+               linea1 = teclado.readLine();
+               n1 = Integer.parseInt(linea1);
+                
+            }catch(IOException e){
+                System.out.println("Error al leer del teclado.");
+                
+            }catch(NumberFormatException e){
+                System.out.println("Debe introducir un número entre 0 y 100.");
+                
+            }finally{
+            }
+        }while (n1 < 0 || n1 > 100);   
+                
+            do{
+            try{
+               System.out.println("Valor de B: ");
+               linea2 = teclado.readLine();
+               n2 = Integer.parseInt(linea2);
+                
+            }catch(IOException e){
+                System.out.println("Error al leer del teclado.");
+                
+            }catch(NumberFormatException e){
+                System.out.println("Debe introducir un número entre 0 y 100.");
+                
+            }finally{
+            }
+        }while (n2 < 0 || n2 > 100); 
+          
+            do{
+            try{
+               System.out.println("Valor de C: ");
+               linea3 = teclado.readLine();
+               n3 = Integer.parseInt(linea3);
+                
+            }catch(IOException e){
+                System.out.println("Error al leer del teclado.");
+                
+            }catch(NumberFormatException e){
+                System.out.println("Debe introducir un número entre 0 y 100.");
+                
+            }finally{
+            }
+        }while (n3 < 0 || n3 > 100);
+            
+             //Usamos bucle If-Else para comparar factores
+            if ( n1 > n2 && n1 > n3){
+                System.out.println("A es mayor");
+            } else {
+                    if (n2 > n1 && n2 > n3){
+                    System.out.println("B es mayor");
+                    } else { 
+                          if (n3 > n1 && n3 > n2){
+                          System.out.println("C es mayor");
+                          } else { 
+                    System.out.println("Son iguales");
+                          } //Cierre else C 
+                    } //Cierre else B 
+            } //Cierre else A 
+         
+    } // Cierre main
+} // Cierre Class
