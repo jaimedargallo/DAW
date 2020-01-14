@@ -29,8 +29,8 @@ public class EjercicioMasaCorporal {
         
         System.out.println("Altura: " + altura);
         
-        float IMS = (peso / (altura * 2));
+        double IMS = (peso / (Math.pow(altura, 2)));
         System.out.println("Su indice de Masa corporal es: " + IMS);
-    }
-    
+   
+    }  
 }
