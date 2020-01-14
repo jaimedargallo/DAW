@@ -1,0 +1,36 @@
+
+package ejercicio.masacorporal;
+
+/** 
+ * 20.1.4 Ejercicio 4
+ * Construir un programa que dado el peso (en kilogramos) y la altura de una persona (en metros) calcule y muestre por pantalla su Indice de Masa Corporal (IMS) 
+ * o índice de Quetelet. Este índice pretende determinar el intervalo de peso más saludable que puede tener una persona. 
+ * El valor de este índice se calcula mediante la siguiente expresión:
+ * IMS = peso/altura2 
+ * Se suele establecer un intervalo de 18 a 25 como saludable en personas adultas. 
+ * Para la realización de ejercicios, en los que el usuario deba introducir datos por teclado, es posible utilizar las siguientes instrucciones 
+ * para leer los datos por teclado:
+ */
+
+import java.util.Scanner;
+
+
+public class EjercicioMasaCorporal {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Introducir peso en kilogramos: ");
+        float P = entrada.nextFloat();
+        float peso = P;
+        
+        System.out.println("Altura en metros: ");
+        float A = entrada.nextFloat();
+        float altura = A;
+        
+        System.out.println("Altura: " + altura);
+        
+        float IMS = (peso / (altura * 2));
+        System.out.println("Su indice de Masa corporal es: " + IMS);
+    }
+    
+}
