@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding:"utf-8" standalone="no"?>
+<emulation xmlns:xsi="http://w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="emuladores.xsd">
+    <distributions>
+        <distribution cod="dE.00001" name="RetroPie" version="4.5">
+            <release>2019-06-17</release>
+            <installation>medium</installation>
+            <emulators kodi="true">72</emulators>
+        </distribution>
+        <distribution cod="dE.00010" name="Recalbox" version="6.0">
+            <emulators kodi="true">41</emulators>
+            <release>2019-03-12</release>
+            <installation>low</installation>
+        </distribution>
+        <distribution cod="dE.00011" name="Lakka" version="2.2">
+            <installation>high</installation>
+            <release>2018-12-25</release>           
+            <emulators kodi="false">29</emulators>
+        </distribution>
+    </distributions>
+    <machines>   
+        <machine model="Raspberry Pi 2" discontinued="on">
+            <compatible dis="dE.00001"/>
+            <compatible dis="dE.00010"/>
+            <compatible dis="dE.00011"/>
+        </machine>
+        <machine model="Raspberry Pi 3 Model B+">
+            <compatible dis="dE.00010"/>
+        </machine>
+        <machine model="Raspberry Pi 4">
+        </machine>
+    </machines>
+</emulation>
