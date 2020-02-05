@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-<META name="Author" content="Jaime Dargallo Saiz">
 
 <!-- https://www.w3schools.com/html/html_charset.asp -->
 
@@ -41,14 +40,13 @@
  -->
 
 <!DOCTYPE HTML>
-<meta name="Author" content="Jaime Dargallo Saiz">
-<meta name="description" content="Segunda tarea de la Asignatura lenguaje de marcas. En la que practicamos lo aprendido sobre Html y CSS">
-<meta name="keywords" content="DAW, HTML, CSS, lenguajes, marcas">
-
 <html>
     <head>
         <title>Test</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
+	<meta name="Author" content="Jaime Dargallo Saiz">
+	<meta name="description" content="Segunda tarea de la Asignatura lenguaje de marcas. En la que practicamos lo aprendido sobre Html y CSS">
+	<meta name="keywords" content="DAW, HTML, CSS, lenguajes, marcas">
     </head>
     
     <body>
@@ -91,49 +89,12 @@
 </html>
 
 
-<!-- CSS Externo
 
 
-body {
-  background-color: black;
-  background-image: url('resources/textura.png');
-  color: Blue;
-}
-
-a:link {
-  color: green;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: hotpink;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: grey;
-  background-color: transparent;
-  text-decoration: underline;
-}
 
 
-a:active {
-  color: grey;
-  background-color: transparent;
-  text-decoration: underline;
-}
 
 
-p {
-  
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
-}
-
-
--->
 
 
 
