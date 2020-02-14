@@ -7,7 +7,6 @@
 		<autor>Jaime Dargallo Saiz</autor>
 		</xs:documentation>
 	</xs:annotation>
-	
 	<xs:element name="emulation">
 		<xs:complexType>
 			<xs:sequence>
@@ -62,13 +61,13 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="machines">
+				<xs:element name="machines" ref="machines" maxOccurs="unbounded"> 
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element ame="machine" ref="machine" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="compatible" ref="compatible" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="compatible" ref="compatible" maxOccurs="10">
 											<xs:complexType>
 												<xs:attribute name="dis" type="xs:string" use="required"/>
 											</xs:complexType>
@@ -80,10 +79,12 @@
         								</xs:restriction>
         							</xs:attribute>				
 									<xs:attribute name="discontinued" type="xs:string">
-										<xs:choice base="xs:string">
-     										<xs:element name="on" />
-     										<xs:element name="off" />
-     									</xs:choice>
+										<xs:complexType>
+											<xs:choice base="xs:string">
+     											<xs:element name="on" />
+     											<xs:element name="off" />
+     										</xs:choice>
+     									</xs:complexType>
      								</xs:attribute>		
 								</xs:complexType>
 							</xs:element>
