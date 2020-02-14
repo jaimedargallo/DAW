@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="ES">
+		Esquema de Emuladores para Raspberry PI
+		<fecha>2020-02-13</fecha>
+		<autor>Jaime Dargallo Saiz</autor>
+		</xs:documentation>
+	</xs:annotation>
+	
+	<xs:element name="emulation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="distributions" ref="distributions">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="distribution">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="release" ref="release" Type="xs:string"/>
+										<xs:element name="installation" ref="installation" type="xs:string"/>
+										<xs:element name="emulators">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="kodi" type="xs:string" use="required"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="cod" type="xs:string" use="required"/>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+									<xs:attribute name="version" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="machines">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ame="machine" ref="machine" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="compatible" ref="compatible" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="dis" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="model" type="xs:string" use="required"/>
+									<xs:attribute name="discontinued" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
