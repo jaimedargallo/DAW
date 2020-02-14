@@ -20,20 +20,24 @@
 										<xs:element name="release" ref="release" Type="xs:date"/>
 										<xs:element name="installation" ref="installation" type="xs:string">
 											<xs:complexType>
-												<xs:choice>
+												<xs:choice base="xs:string">
      												<xs:element name="high" />
      												<xs:element name="medium" />
      												<xs:element name="low" />
     											</xs:choice>
 											</xs:complexType>
 										</xs:element>	
-										<xs:element name="emulators">
+										<xs:element name="emulators" Type="xs:integer">
 											<xs:complexType>
-												<xs:simpleContent>
-													<xs:extension base="xs:string">
-														<xs:attribute name="kodi" type="xs:string" use="required"/>
-													</xs:extension>
-												</xs:simpleContent>
+												<xs:restriction base="xs:integer">
+												   <xs:minExclusive value="0"/>
+    											</xs:restriction>
+												<xs:attribute name="kodi" type="xs:string" use="required">
+													<xs:choice base="xs:string">
+     													<xs:element name="false" />
+     													<xs:element name="true" />
+    												</xs:choice>
+												</xs:attribute>		
 											</xs:complexType>
 										</xs:element>
 									</xs:all>
@@ -70,8 +74,17 @@
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
-									<xs:attribute name="model" type="xs:string" use="required"/>
-									<xs:attribute name="discontinued" type="xs:string"/>
+									<xs:attribute name="model" type="xs:string" use="required">
+										<xs:restriction base="xs:string">
+        									<xs:maxLength value="128"/>
+        								</xs:restriction>
+        							</xs:attribute>				
+									<xs:attribute name="discontinued" type="xs:string">
+										<xs:choice base="xs:string">
+     										<xs:element name="on" />
+     										<xs:element name="off" />
+     									</xs:choice>
+     								</xs:attribute>		
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
