@@ -16,9 +16,17 @@
 						<xs:sequence>
 							<xs:element name="distribution">
 								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="release" ref="release" Type="xs:string"/>
-										<xs:element name="installation" ref="installation" type="xs:string"/>
+									<xs:all>
+										<xs:element name="release" ref="release" Type="xs:date"/>
+										<xs:element name="installation" ref="installation" type="xs:string">
+											<xs:complexType>
+												<xs:choice>
+     												<xs:element name="high" />
+     												<xs:element name="medium" />
+     												<xs:element name="low" />
+    											</xs:choice>
+											</xs:complexType>
+										</xs:element>	
 										<xs:element name="emulators">
 											<xs:complexType>
 												<xs:simpleContent>
@@ -28,10 +36,23 @@
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-									</xs:sequence>
-									<xs:attribute name="cod" type="xs:string" use="required"/>
-									<xs:attribute name="name" type="xs:string" use="required"/>
-									<xs:attribute name="version" type="xs:string" use="required"/>
+									</xs:all>
+									<xs:attribute name="cod" type="xs:string" use="required">
+   	 									<xs:restriction base="xs:string">
+      	 									<xs:pattern value="[a-z] [A-Z] [.] [0-1] [0-1] [0-1] [0-1] [0-1]"/>
+   	 									</xs:restriction>
+									</xs:attribute>
+									<xs:attribute name="name" type="xs:string" use="required">
+									    <xs:restriction base="xs:string">
+        									<xs:maxLength value="128"/>
+        								</xs:restriction>
+    								</xs:attribute>
+									<xs:attribute name="version" type="xs:string" use="required">
+									 	 <xs:restriction base="xs:decimal">
+       										 <xs:fractionDigits value="1"/>
+      								 		 <xs:minInclusive value="1"/>
+       									</xs:restriction>
+									</xs:attribute>								
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
