@@ -1,0 +1,17 @@
+<!ELEMENT emulation (distributions, machines)*>
+	<!ELEMENT distributions (distribution)>
+		<!ELEMENT distribution (release, installation, emulator)>
+			<!ELEMENT release (#PCDATA)>
+			<!ELEMENT installation (high|medium|low)>
+			<!ELEMENT emulator (#PCDATA)>
+			<!ATTLIST emulator kodi CDATA>
+		<!ATTLIST distribution cod ID #REQUIRED>
+		<!ATTLIST distribution name CDATA>
+		<!ATTLIST distribution version CDATA>
+
+	<!ELEMENT machines (machine)>
+		<!ELEMENT machine (compatible)>
+			<!ELEMENT compatible (#EMPTY)>
+			<!ATTLIST compatible dis IDREF #REQUIRED>
+		<!ATTLIST machine model CDATA>
+		<!ATTLIST machine discontinued (on|off) "off">
